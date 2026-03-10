@@ -1,0 +1,16 @@
+@media (min-width: 768px){
+
+.navigation{
+display:flex;
+gap:20px;
+}
+
+#menu{
+display:none;
+}
+
+#courses{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
