@@ -1,130 +1,133 @@
-
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Roboto, sans-serif;
-  margin: 1rem;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 1rem;
 }
 
-h1 {
-	padding: 1rem;
-	font-size: 2rem;
-  color: black;
+header {
+  background-color: white;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.navigation.open {
+  display: flex;
+}
+
+main {
+  padding: 1rem;
+}
+
+#courses {
+  display: grid;
+  gap: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template: auto 1fr auto / auto 300px;
+  grid-gap: 1rem;
+  grid-column: 1/5;
+  padding: 0.5rem;
+
 }
 
 h2 {
   background-color: black;
   color: white;
-  border: 1px solid;
-  border-radius: 3px;
- 
-}
-
-.container {
-   display: grid;
-   grid-template: auto 1fr auto / auto 300px;
-   grid-gap: 1rem;
-   grid-row: 1/3;
-   grid-column: 1/5;
-   padding: 0.5rem;
-}
-
-main {
- 
-
-}
-
-section {
- 
-}
-
-.item-1 {
-	text-align: center;
-  color: white;
-	background-color: grey;
- 
- 
-
-}
-
- .item-2 {
- border: 1px solid;
- text-align: center;
- color: white;
- background-color: grey;
- 
-}
-
-.item-3 {
-  background-color: grey;
   text-align: center;
-  color: white;
-  
-  
+
 }
 
-  nav li a {
-     
-     color: white;
-     border: 0 solid;
-    margin: 2px;
-    text-decoration: none;
-     border-radius: 2px;
-  }
-  
-  picture img {
-     width: 150px;
-    height: auto;
-   
-    margin: 5px;
-    margin-left: 20px;
-  }
+section .me,
+.student {
 
-  
+  background-color: grey;
+}
+
 
 p {
   padding: 2rem;
-  color: black;
- 
 }
 
- .navigation {
-	
+.buttons {
   padding: 1rem;
-	color: white;
-  background-color: black;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2rem;
+  grid-gap: 1rem;
+
+}
+
+
+nav ul,
+li,
+a {
   list-style-type: none;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+
+
+a span {
+  background-color: grey;
+}
+
+.name {
+  background-color: white;
+  position: absolute;
+  padding: 2rem;
+
 }
 
 footer {
+
+  align-items: center;
   background-color: grey;
-  color: var(--callout);
   text-align: center;
- 
- 
 }
 
-#courses{
-display:grid;
-grid-template-columns:1fr;
-gap:10px;
+.social {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding-bottom: 1rem;
 }
 
-.completed{
-background:green;
-color:white;
-padding:10px;
+picture img {
+  width: 150px;
+  height: auto;
+  margin-left: 70px;
+  padding: 1rem;
+  margin-bottom: 28px;
 }
 
-button {
-  margin: 10px;
-  padding: 1rem 1rem 1rem  ;
-  border-radius: 5px;
-  border: 0;
-  background-color: grey;
+#credits {
+  text-align: center;
 }
 
+.spel {
+  margin: 2%;
+}
+
+#menuBtn{
+font-size:2rem;
+background:none;
+border:none;
+cursor:pointer;
+margin-left: 95%;
+}
