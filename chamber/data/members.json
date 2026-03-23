@@ -1,0 +1,57 @@
+[
+  {
+    "name": "sunsetbakery",
+    "address": "8,Mariam Babaginga Way Asaba, Delta State",
+    "phone": "+123-456-1010",
+    "website": "https://sunsetbakery.com.ng/about-us/",
+    "image": "SUNSET.jpg",
+    "level": 3,
+    "notes": "Family-owned bakery since 1990"
+  },
+  {
+    "name": "Harbor Books",
+    "address": "120 Ogui Rd. Enugu Enugu, Enugu.",
+    "phone": "2349060104636",
+    "website": "https://enugu.infoisinfo.ng/card/eachon-bookshops/51234",
+    "image": "harbor book.webp",
+    "level": 2,
+    "notes": "Independent bookstore"
+  },
+  {
+    "name": "GreenLeaf Cafe",
+    "address": "#60 Odogun Avenue, New Layout, Off Jakpa Road, Ekpan. Effurun",
+    "phone": "+234 7043 544 108",
+    "website": "https://rexclarkeadventures.com/breakfast-spots-cafes-enugu/",
+    "image": "Breakfast-Meals cafe.jpg",
+    "level": 1,
+    "notes": "Organic cafe and bakery"
+  },
+  {
+    "name": "Summit Fitness",
+    "address": "6, Ogui Road,Enugu State",
+    "phone": "2348060834448",
+    "website": "https://www.bing.com/search?q=Fitness+Gym+Equipment&bcid=RDXKaFmWmqwJqfv7TBhsecH21V0......2k&FORM=vissbi&hq=1",
+    "image": "gym.webp", 
+    "level": 3,
+    "notes": "Gym and personal training"
+  },
+  {
+    "name": "Creative Studio",
+    "address": "78 holly ghost st, Enugu State",
+    "phone": "08067463200",
+    "website": "https://www.bing.com/search?q=Film+Shoot+Setup+Tips&bcid=RKZQ4A62p6wJqfv7TBhsecH21V0......4E&FORM=vissbi&hq=1",
+    "image": "studio picture.webp",
+    "level": 2,
+    "notes": "Design and photography"
+  },
+ 
+  {
+    "name": "Harbor Pharmacy",
+    "address": "12 Health Ave, Example City",
+    "phone": "(555) 789-0123",
+    "website": "https://harborpharmacy.example.com",
+    "image": "pharmacy.jpg",
+    "level": 2,
+    "notes": "Community pharmacy"
+  }
+]
