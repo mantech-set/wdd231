@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Example City Chamber — Home</title>
+  <meta name="description" content="Welcome to Example City Chamber of Commerce">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <h1 class="site-title">Example City Chamber</h1>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <button class="nav-toggle" aria-expanded="false">Menu</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="inner">
+    <section class="hero">
+      <h2>Supporting local business in Example City</h2>
+      <p>Connecting residents and visitors with the best local services, shops, and events.</p>
+      <p>
+        <a class="btn" href="join.html">Become a Member</a>
+        <a class="btn secondary" href="directory.html">View Directory</a>
+      </p>
+    </section>
+
+    <section class="spotlights">
+      <h3>Business Spotlights</h3>
+      <div class="cards">
+        <article class="card">
+          <h4>sunsetbakery</h4>
+          <p>Family-owned bakery with fresh breads and pastries.</p>
+        </article>
+        <article class="card">
+          <h4>Harbor Books</h4>
+          <p>Independent bookstore and community events space.</p>
+        </article>
+        <article class="card">
+          <h4>GreenLeaf Cafe</h4>
+          <p>Organic and locally sourced menu items.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p>Contact: Daniel Chinagorom · WDD 231</p>
+      <p>Last modified: <span id="lastModified">(loading)</span></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('lastModified').textContent = document.lastModified || new Date().toLocaleString();
+  </script>
+</body>
+
+</html>
