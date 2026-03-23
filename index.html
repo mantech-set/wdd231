@@ -1,121 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="favicon.ico">
+  <title>WDD 231 Course Home</title>
+  
 
-<title>WDD 231 Course Home</title>
+  <meta name="description" content="Course home page for WDD231">
+  <meta name="author" content="Daniel Chinagorom">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://yourgithubusername.github.io/wdd231/">
 
-<meta name="description" content="Course home page for WDD231">
-<meta name="author" content="Your Name">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
 
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/larger.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-<script src="scripts/navigation.js" defer></script>
-<script src="scripts/date.js" defer></script>
-<script src="scripts/course.js" defer></script>
-
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+  
 </head>
 
 <body>
 
-<header>
+  <header>
 
-<img src="images/AM Logo.jpeg2.jpg new.svg" alt="Site Logo" width="100" height="100">
-<span class="name">Am Construction</span>
+    <img src="images/Logo.svg" alt="Site Logo" width="100" height="100">
+    <span class="name">Am Construction</span>
 
+    <nav class="navigation">
+          <ul>
+            <li><a href="#"><span>Home</span></a></li>
+            <li><a href="#">Chamber project</a></li>
+            <li><a href="#">Final project</a></li>
+          </ul>
+        </nav>
 
+        <button id="menuBtn" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">&#9776;</button>
+      </header>
 
+      <main id="maincontent" role="main">
+        <h1>Home</h1>
+        <div class="container">
+          <section class="about">
+            <h2>About Me</h2>
+            <p>
+              A. Myles Construction is a growing construction company founded by Daniel Chinagorom in 2023.
+              The company is located in Abuja and focuses on providing quality building and construction services.
+              The company is committed to professionalism, safety, and high construction standards in all its
+              operations.
+            </p>
+          </section>
 
-<nav>
-<ul class="navigation">
-<li><a href="index.html"><span>Home</span></a></li>
-<li><a href="#">Chamber Project</a></li>
-<li><a href="#">Final Project</a></li>
-</ul>
-</nav>
+          <section class="photos">
+            <h2>Student Photos</h2>
+            <picture>
+              <img src="images/daniel (1).svg" alt="student image" width="150" height="150" loading="lazy">
+            </picture>
+          </section>
+       </main>
+       <aside>
+          <section class="certificate">
+            <h2>Certificate Courses</h2>
 
-  <button id="menuBtn" aria-label="Menu">&#9776;</button>
+            <div class="buttons">
+              <button type="button" id="allBtn">All Courses</button>
+              <button type="button" id="cseBtn">CSE Courses</button>
+              <button type="button" id="wddBtn">WDD Courses</button>
+              <button type="button" id="wdd130Btn">WDD130 Courses</button>
+              <button type="button" id="wdd131Btn">WDD131 Courses</button>
+              <button type="button" id="wdd231Btn">WDD231 Courses</button>
+            </div>
 
+            <div id="courses" aria-live="polite"></div>
+            <p id="credits">Total credits: <span id="creditTotal">0</span></p>
+          </section>
+        </div>
+      </aside>
 
-</header>
+      <footer>
+        <div class="social">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/github.svg" alt="GitHub image" width="100" height="100"><span class="sr-only">GitHub</span>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/linkedin.svg" alt="LinkedIn" width="100" height="100"> <span class="sr-only">LinkedIn</span>
+          </a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/x-solid.svg" alt="Twitter" width="100" height="100"> <span class="sr-only">Twitter</span>
+          </a>
+        </div>
 
-<main>
+        <p>© <span id="year"></span> Daniel Chinagorom | Nigeria</p>
+        <p id="lastModified"></p>
+      </footer>
 
-<h1>Home</h1>
-<div class="container">
-<section>
-<div class="me">
-<h2>About Me</h2>
+    </body>
 
-<p>
-  A.Myles Construction is a growing construction company founded by Daniel Chinagoron in 2023.
-  The company is located in Abuja and focuses on providing quality building and construction services.
-  Since its establishment, A. Myles Construction has aimed to contribute to infrastructure development
-  by delivering reliable and durable construction projects, The company is committed to professionalism, 
-  safety,and high construction standards in all its operations. 
-</p>
-</div>
-</section>
-
-<section>
-<div class="student">
-<h2>Student Photos</h2>
-<picture>
-<img src="images/daniel (1).svg" alt="student image" width="150" height="150">
-</picture>
-</div>
-</section>
-</div>
-</main>
-<section>
-<aside>
-<div class="spel">
-<h2>Certificate Courses</h2>
-</div>
-
-
-<div class="buttons">
-<button id="">All Courses</button>
-<button id="">CSE Courses</button>
-<button id="">WDD Courses</button>
-<button id="">WDD130 Courses</button>
-<button id="">WDD131 Courses</button>
-<button id="">WDD231 Courses</button>
-</div>
-
-<div id="courses"></div>
-
-<p id="credits">total credit listed in courses above is 6</p>
-
-</section>
-
-</aside>
-
-
-
-<footer>
-
-<div class="social">
-<a href="https://github.com/">GitHub</a>
-<img src="images/github.svg" alt="github image" width="50" height="50">
-<a href="https://linkedin.com/">LinkedIn</a>
-<img src="images/linkedin.svg" alt="linkedin image" width="50" height="50">
-<a href="https://twitter.com/">twitter</a>
-<img src="images/x-solid.svg" alt="twitter image" width="50" height="50">
-</div>
-
-<p>
-© <span id="year"></span> Daniel Chinagorom | Nigeria
-</p>
-
-<p id="lastModified"></p>
-
-</footer>
-
-</body>
 </html>
