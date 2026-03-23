@@ -1,0 +1,41 @@
+@media(min-width:800px) {
+  .directory.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem
+  }
+
+  .directory.grid .card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .directory.grid .card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .directory.list {
+    display: block
+  }
+
+  .card {
+    margin: 0
+  }
+}
+
+@media(min-width:1000px) {
+  .site-title {
+    font-size: 1.6rem
+  }
+}
+
+@media(min-width:800px) {
+  .saved-submissions .sub-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
