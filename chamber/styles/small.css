@@ -98,13 +98,24 @@ body {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+.main-nav {
+  position: relative;
+}
+
 .main-nav .nav-list {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 30;
   flex-direction: column;
   gap: 0;
   margin: 0;
   padding: 0.5rem 0;
   list-style: none;
+  background: green;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 .main-nav.open .nav-list {
@@ -219,10 +230,18 @@ textarea:focus {
     display: none
   }
 
+  .main-nav {
+    position: static;
+  }
+
   .main-nav .nav-list {
     display: flex;
+    position: static;
     flex-direction: row;
-    gap: 1rem
+    gap: 1rem;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
   }
 }
 
@@ -402,9 +421,25 @@ h1 {
   font-size: 1.1rem;
 }
 
+.hero figure {
+  max-width: 1100px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
 .hero img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   margin-top: 1rem;
   border-radius: 10px;
+}
+
+@media (min-width: 900px) {
+  .hero figure {
+    padding: 0;
+  }
 }
 
 .hero span {
