@@ -52,7 +52,6 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
   height: 40px;
   background: transparent;
   border: 0;
@@ -61,7 +60,7 @@ body {
 
 .nav-toggle .hamburger {
   display: inline-block;
-  width: 22px;
+  width: 80px;
   height: 2px;
   background: white;
   position: relative;
