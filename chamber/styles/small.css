@@ -376,9 +376,15 @@ h2 {
 
 .bottom-footer {
   display: flex;
-  text-align: center;
-  margin-left: 14rem;
-  padding: 1rem
+  /* center content and avoid horizontal overflow */
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 main {
@@ -409,4 +415,16 @@ h1 {
 .bottom-footer span {
   color: yellow;
   font-size: .85rem;
+}
+
+/* Prevent footer paragraphs from causing horizontal overflow */
+.bottom-footer p {
+  margin: 0;
+  /* allow flex items to shrink below their content width */
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: center;
+  /* allow long words/URLs to break and wrap */
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
