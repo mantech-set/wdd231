@@ -159,6 +159,34 @@ async function init() {
       navToggle.setAttribute('aria-expanded', String(!expanded));
       mainNav.classList.toggle('open');
     });
+    // close menu when clicking outside of it
+    document.addEventListener('click', (evt) => {
+      if (!mainNav.classList.contains('open')) return;
+      const target = evt.target;
+      if (mainNav.contains(target) || navToggle.contains(target)) return;
+      navToggle.setAttribute('aria-expanded', 'false');
+      mainNav.classList.remove('open');
+    });
+
+    // close menu with Escape key
+    document.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Escape' && mainNav.classList.contains('open')) {
+        navToggle.setAttribute('aria-expanded', 'false');
+        mainNav.classList.remove('open');
+        navToggle.focus();
+      }
+    });
+
+    // close menu when a nav link is activated (useful on mobile)
+    const navLinks = document.querySelectorAll('.main-nav .nav-list a');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (mainNav.classList.contains('open')) {
+          navToggle.setAttribute('aria-expanded', 'false');
+          mainNav.classList.remove('open');
+        }
+      });
+    });
   }
 
   // footer last modified
