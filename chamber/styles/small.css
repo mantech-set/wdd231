@@ -318,11 +318,19 @@ textarea:focus {
 }
 
 .grid {
-  display: flex;
+  display: grid;
   gap: 2rem;
-  grid-template-columns: 300px 300px 1fr;
-  grid-column: 2/4;
+  /* default to a single column to avoid overflow on narrow viewports */
+  grid-template-columns: 1fr;
+  /* avoid horizontal overflow from uniform margins */
   margin: 2rem 0;
+  max-width: 100%;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr 300px;
+  }
 }
 
 .write-up {
