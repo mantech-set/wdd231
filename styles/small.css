@@ -4,130 +4,227 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 1rem;
-}
-
-header {
-  background-color: white;
-}
-
-.navigation {
-  display: flex;
-  flex-direction: column;
-
-}
-
-.navigation.open {
-  display: flex;
-}
-
-main {
-  padding: 1rem;
-}
-
-#courses {
-  display: grid;
-  gap: 10px;
-}
-
-.container {
-  display: grid;
-  grid-template: auto 1fr auto / auto 300px;
-  grid-gap: 1rem;
-  grid-column: 1/5;
-  padding: 0.5rem;
-
-}
-
-h2 {
-  background-color: black;
-  color: white;
-  text-align: center;
-
-}
-
-section .me,
-.student {
-
-  background-color: grey;
-}
-
-
-p {
-  padding: 2rem;
-}
-
-.buttons {
-  padding: 1rem;
-  border-radius: 5px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 2rem;
-  grid-gap: 1rem;
-
-}
-
-
-nav ul,
-li,
-a {
-  list-style-type: none;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem;
-}
 
 
 
-a span {
-  background-color: grey;
-}
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 1rem;
+  }
 
-.name {
-  background-color: white;
-  position: absolute;
-  padding: 2rem;
 
-}
 
-footer {
+  header {
+    background-color: white;
+  }
 
-  align-items: center;
-  background-color: grey;
-  text-align: center;
-}
+  .navigation {
+    display: flex;
+    flex-direction: column;
 
-.social {
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  padding-bottom: 1rem;
-}
+  }
 
-picture img {
-  width: 150px;
-  height: auto;
-  margin-left: 70px;
-  padding: 1rem;
-  margin-bottom: 28px;
-}
+  .navigation.open {
+    display: flex;
+  }
 
-#credits {
-  text-align: center;
-}
+  main {
+    padding: 1rem;
+  
+  }
 
-.spel {
-  margin: 2%;
-}
+  #courses {
+    display: grid;
+    gap: 10px;
+  }
 
-#menuBtn{
-font-size:2rem;
-background:none;
-border:none;
-cursor:pointer;
-margin-left: 95%;
-}
+  
+
+  h2 {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+  }
+
+ 
+
+
+  p {
+    padding: 2rem;
+  }
+
+  .buttons {
+    padding: 1rem;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+    grid-gap: 1rem;
+    
+
+  }
+
+
+  a span {
+    background-color: grey;
+  }
+
+  span .name {
+    position: absolute;
+    top: 20px;
+    left: 120px;
+  }
+  
+  footer {
+
+    align-items: center;
+    background-color: grey;
+    text-align: center;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding-bottom: 1rem;
+  }
+
+  picture img {
+    width: 150px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 1rem;
+    margin-bottom: 28px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  :focus {
+    outline: 3px solid #ffbf47;
+    outline-offset: 2px;
+  }
+
+  #credits {
+    text-align: center;
+  }
+
+
+  #menuBtn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 95%;
+  }
+
+ 
+
+  .branding {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .branding img {
+    border-radius: 6px;
+  }
+
+  
+
+  .navigation.open {
+    display: block;
+  }
+
+  .navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .navigation ul li a {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0.75rem;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .buttons button {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #333;
+    background: grey;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .course-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 6px;
+    background: #fafafa;
+  }
+
+  .course-card.completed {
+    border-color: #2b8a3e;
+    background: linear-gradient(180deg, #f0fff4, #e6f8ea);
+  }
+
+  @media (min-width: 768px) {
+    #menuBtn {
+      display: none;
+    }
+
+    .navigation {
+      display: flex !important;
+    }
+
+    .navigation ul {
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 1.5rem;
+      
+    }
+  }
+
+  
+
+  header nav{
+    background-color: black;
+    margin: 20px;
+  }
+
+  .about{
+    background-color: grey;
+  }
+
+  .photos {
+    background-color: grey;
+  }
+
+  .sr-only {
+    color: white;
+    list-style: none;
+    background-color: black;
+  }
