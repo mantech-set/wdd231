@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Join — Example City Chamber</title>
+  <meta name="description" content="Join the Example City Chamber of Commerce">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <h1 class="site-title">Example City Chamber</h1>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <button class="nav-toggle" aria-expanded="false">Menu</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="inner">
+    <section>
+      <h2>Become a Member</h2>
+      <p>Choose from three membership levels. Benefits include directory listing, event invites, and promotional
+        opportunities.</p>
+    </section>
+
+    <section>
+      <form id="joinForm" class="join-form">
+        <fieldset>
+          <legend>Membership Information</legend>
+
+          <label for="business">Business / Organization Name</label>
+          <input id="business" name="business" required>
+
+          <label for="contact">Primary Contact Name</label>
+          <input id="contact" name="contact" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel">
+
+          <label for="address">Address</label>
+          <input id="address" name="address">
+
+          <fieldset>
+            <legend>Membership Level</legend>
+            <label><input type="radio" name="level" value="1" required> Member</label>
+            <label><input type="radio" name="level" value="2"> Silver</label>
+            <label><input type="radio" name="level" value="3"> Gold</label>
+          </fieldset>
+
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" rows="4"></textarea>
+
+          <button type="submit">Submit Application</button>
+        </fieldset>
+      </form>
+
+      <div id="formMessage" aria-live="polite"></div>
+
+      <section aria-labelledby="savedTitle" class="saved-submissions">
+        <h3 id="savedTitle">Saved Applications</h3>
+        <div id="savedSubmissions">
+          <!-- saved submissions will render here -->
+        </div>
+        <p>
+          <button id="clearSubmissions">Clear saved submissions</button>
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p>Contact: Your Full Name · WDD 231</p>
+      <p>Last modified: <span id="lastModified">(loading)</span></p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/join.js"></script>
+  <script>
+    document.getElementById('lastModified').textContent = document.lastModified || new Date().toLocaleString();
+  </script>
+</body>
+
+</html>
