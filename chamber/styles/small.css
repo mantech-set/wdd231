@@ -1,0 +1,676 @@
+:root {
+  --brand: #ff8c00;
+  --accent: #046278;
+  --muted: #666;
+  --bg: #fafafa;
+  --card-bg: #ffffff;
+  --text: #012;
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-header {
+  background: var(--brand);
+  color: var(--card-bg);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  padding: .25rem 0;
+}
+
+.site-header .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.site-title {
+  font-size: 1.2rem;
+  padding: .5rem
+}
+
+.nav-toggle {
+  display: inline-block;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  padding: .5rem;
+}
+
+.main-nav .nav-list {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0.5rem 0;
+  list-style: none;
+}
+
+.main-nav.open .nav-list {
+  display: flex;
+}
+
+.main-nav .nav-list a {
+  display: block;
+  padding: .4rem .6rem;
+}
+
+.main-nav .nav-list a {
+  color: #012
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0
+}
+
+.search {
+  margin-left: 1rem;
+}
+
+.search input[type="search"] {
+  padding: .4rem .6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 180px;
+}
+
+.results-summary {
+  margin-left: 1rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid Highlight;
+  outline-offset: 2px;
+}
+
+.view-toggle button {
+  margin-right: .5rem;
+  padding: .4rem .6rem;
+  border: 1px solid #ccc;
+  background: #f5f5f5
+}
+
+.directory {
+  display: block
+}
+
+.card {
+  border: 1px solid #e6e6e6;
+  padding: 1rem;
+  margin: .6rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.card img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.card .info {
+  flex: 1
+}
+
+.card h3 {
+  margin-bottom: .25rem
+}
+
+.site-footer {
+  border-top: 1px solid #eee;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: var(--muted)
+}
+
+@media(min-width:600px) {
+  .controls {
+    margin: 1.5rem 0
+  }
+
+  .nav-toggle {
+    display: none
+  }
+
+  .main-nav .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: .5rem .75rem;
+  border-radius: 6px;
+  text-decoration: none;
+
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+/* Join form styles */
+.join-form fieldset {
+  border: 1px solid #e6e6e6;
+  padding: 1rem;
+  border-radius: 6px
+}
+
+.join-form label {
+  display: block;
+  margin-top: .5rem;
+  font-weight: 600
+}
+
+.join-form input,
+.join-form textarea,
+.join-form select {
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: .25rem
+}
+
+.join-form button[type="submit"] {
+  margin-top: .75rem
+}
+
+/* Saved submissions */
+.saved-submissions {
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem
+}
+
+.saved-submissions .sub-list {
+  display: grid;
+  gap: .75rem
+}
+
+.saved-item {
+  border: 1px solid #ddd;
+  padding: .6rem;
+  border-radius: 6px;
+  background: #fff
+}
+
+.saved-item h4 {
+  margin: 0 0 .25rem 0
+}
+
+.saved-item .small {
+  color: var(--muted);
+  font-size: .85rem
+}
+
+/* Form message */
+.form-success {
+  color: green;
+  margin-top: .5rem
+}
+
+.form-error {
+  color: #b00020;
+  margin-top: .5rem
+}
+
+/* Small improvements for directory cards */
+.directory.grid {
+  padding: .5rem 0
+}
+
+.card {
+  background: #fff
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  /* default to a single column to avoid overflow on narrow viewports */
+  grid-template-columns: 1fr;
+  /* avoid horizontal overflow from uniform margins */
+  margin: 2rem 0;
+  max-width: 100%;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+.write-up {
+  padding: 0.5rem;
+  border: 1px solid black;
+  margin-left: 10rem 10rem 10rem 10rem;
+  box-shadow: 4px 4px 8px;
+  border-radius: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  padding: 0.5rem;
+  color: white;
+  background-color: green;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.About-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px;
+}
+
+.mission {
+  padding: 0.5rem;
+  border: 1px solid black;
+  margin-left: 10rem 10rem 10rem 10rem;
+  box-shadow: 4px 4px 8px;
+  border-radius: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.bottom-footer {
+  display: flex;
+  /* center content and avoid horizontal overflow */
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+main {
+  padding: 1rem;
+  margin-top: 2rem 3rem;
+}
+
+h1 {
+
+  color: black;
+  padding: 2rem;
+}
+
+.hero p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.hero figure {
+  max-width: 1100px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+@media (min-width: 900px) {
+  .hero figure {
+    padding: 0;
+  }
+}
+
+.hero span {
+  color: orangered;
+  font-size: .9rem;
+}
+
+.bottom-footer span {
+  color: yellow;
+  font-size: .85rem;
+}
+
+/* Prevent footer paragraphs from causing horizontal overflow */
+.bottom-footer p {
+  margin: 0;
+  /* allow flex items to shrink below their content width */
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: center;
+  /* allow long words/URLs to break and wrap */
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  color: white;
+}
+
+footer {
+  background-color: green;
+  color: white;
+}
+
+.home-p {
+  margin-top: 10rem;
+  margin-left: 20rem;
+  font-size: 1.1rem;
+  position: absolute;
+  background-color: green;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+img {}
+
+/* ========== HOME PAGE STYLES ========== */
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero figure {
+  margin: 0;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.hero-content p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+
+.hero-content .btn {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* Events Section */
+.events {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.events h2 {
+  color: var(--accent);
+  background: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.event-card {
+  background: white;
+  padding: 1.5rem;
+  border-left: 4px solid var(--brand);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.event-card p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+/* Weather Section */
+.weather {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: grey;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weather h2 {
+  color: white;
+  background: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.weather-info {
+  min-height: 200px;
+}
+
+.weather-current {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.weather-current h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.weather-current p {
+  margin: 0.25rem 0;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.forecast {
+  margin-top: 1rem;
+}
+
+.forecast h3 {
+  margin-top: 0;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.forecast-day {
+  background: #f9f9f9;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+}
+
+.forecast-date {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.forecast-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.forecast-temp {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: var(--text);
+}
+
+.forecast-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Spotlights Section */
+.spotlights {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.spotlights h2 {
+  color: var(--accent);
+  background: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.spotlight-card {
+  background: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.business-logo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.spotlight-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--accent);
+}
+
+.business-address {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.business-phone,
+.business-website {
+  margin: 0.5rem 0;
+}
+
+.business-phone a,
+.business-website a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.business-phone a:hover,
+.business-website a:hover {
+  text-decoration: underline;
+}
+
+.membership-level {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e6e6e6;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.membership-level strong {
+  color: var(--brand);
+}
