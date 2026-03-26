@@ -47,7 +47,11 @@
  
   {
     "name": "Harbor Pharmacy",
+<<<<<<< HEAD
     "address": "12 Health Ave, Enugu City",
+=======
+    "address": "12 Health Ave, Example City",
+>>>>>>> 72e89441759362dfd40b31c1b719dc2a18b98271
     "phone": "(555) 789-0123",
     "website": "https://harborpharmacy.example.com",
     "image": "pharmacy.jpg",

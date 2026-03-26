@@ -25,6 +25,7 @@
   .card {
     margin: 0
   }
+<<<<<<< HEAD
 
   /* Home page responsive styles */
   .cards {
@@ -43,6 +44,8 @@
   .weather-current {
     flex-direction: row;
   }
+=======
+>>>>>>> 72e89441759362dfd40b31c1b719dc2a18b98271
 }
 
 @media(min-width:1000px) {
@@ -56,6 +59,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+<<<<<<< HEAD
 }
 
 /* Additional responsive styles for hero section */
@@ -77,4 +81,6 @@
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
+=======
+>>>>>>> 72e89441759362dfd40b31c1b719dc2a18b98271
 }
