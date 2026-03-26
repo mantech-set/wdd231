@@ -1,0 +1,80 @@
+@media(min-width:800px) {
+  .directory.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem
+  }
+
+  .directory.grid .card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .directory.grid .card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .directory.list {
+    display: block
+  }
+
+  .card {
+    margin: 0
+  }
+
+  /* Home page responsive styles */
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .spotlight-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .weather-current {
+    flex-direction: row;
+  }
+}
+
+@media(min-width:1000px) {
+  .site-title {
+    font-size: 1.6rem
+  }
+}
+
+@media(min-width:800px) {
+  .saved-submissions .sub-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Additional responsive styles for hero section */
+@media(min-width:800px) {
+  .hero-content {
+    padding: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media(min-width:1000px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
