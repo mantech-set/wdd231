@@ -31,7 +31,7 @@
     "address": "6, Ogui Road,Enugu State",
     "phone": "2348060834448",
     "website": "https://www.bing.com/search?q=Fitness+Gym+Equipment&bcid=RDXKaFmWmqwJqfv7TBhsecH21V0......2k&FORM=vissbi&hq=1",
-    "image": "gym.webp", 
+    "image": "gym.webp",
     "level": 3,
     "notes": "Gym and personal training"
   },
@@ -44,18 +44,22 @@
     "level": 2,
     "notes": "Design and photography"
   },
- 
   {
     "name": "Harbor Pharmacy",
-<<<<<<< HEAD
     "address": "12 Health Ave, Enugu City",
-=======
-    "address": "12 Health Ave, Example City",
->>>>>>> 72e89441759362dfd40b31c1b719dc2a18b98271
     "phone": "(555) 789-0123",
     "website": "https://harborpharmacy.example.com",
     "image": "pharmacy.jpg",
     "level": 2,
     "notes": "Community pharmacy"
+  },
+  {
+    "name": "Tech Solutions Inc",
+    "address": "45 Innovation Drive, Enugu State",
+    "phone": "+234 8012345678",
+    "website": "https://techsolutions-ng.com",
+    "image": "studio.jpg",
+    "level": 3,
+    "notes": "IT Support and Software Development"
   }
 ]
