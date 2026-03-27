@@ -40,6 +40,10 @@
 >>>>>>> 72e89441759362dfd40b31c1b719dc2a18b98271
       <nav class="main-nav" aria-label="Main Navigation">
         <button class="nav-toggle" aria-expanded="false">Menu</button>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="directory.html">Directory</a></li>
@@ -98,6 +102,15 @@
         <a class="btn" href="join.html">Become a Member</a>
         <a class="btn secondary" href="directory.html">View Directory</a>
       </p>
+    <section class="hero" style="background-image: url('images/slider1%20main%20image%20.webp')">
+      <div class="hero-content">
+        <h2>Supporting local business in Enugu City</h2>
+        <p>Connecting residents and visitors with the best local services, shops, and events.</p>
+        <p>
+          <a class="btn" href="join.html">Become a Member</a>
+          <a class="btn secondary" href="directory.html">View Directory</a>
+        </p>
+      </div>
     </section>
 
     <section class="spotlights">
@@ -117,6 +130,27 @@
         </article>
 >>>>>>> 72e89441759362dfd40b31c1b719dc2a18b98271
       </div>
+    <section class="home-grid">
+      <aside class="events">
+        <h3>Current Events</h3>
+        <ul>
+          <li>Enugu Trade Fair — June 12-15</li>
+          <li>Small Business Workshop — Monthly on 2nd Thursday</li>
+          <li>Networking Mixer — Last Friday of the Month</li>
+        </ul>
+      </aside>
+
+      <section class="weather" id="weather-card" aria-live="polite">
+        <h3>Local Weather</h3>
+        <p>(loading weather data...)</p>
+      </section>
+
+      <section class="spotlights" id="home-spotlights">
+        <h3>Member Spotlights</h3>
+        <div class="cards" id="spotlight-cards">
+          <!-- spotlights injected here -->
+        </div>
+      </section>
     </section>
   </main>
 
@@ -169,6 +203,7 @@
 =======
   <footer class="site-footer">
     <div class="inner">
+      <p>&copy; <span id="year"></span> Enugu City Chamber of Commerce</p>
       <p>Contact: Daniel Chinagorom · WDD 231</p>
       <p>Last modified: <span id="lastModified">(loading)</span></p>
     </div>
@@ -176,6 +211,32 @@
 
   <script>
     document.getElementById('lastModified').textContent = document.lastModified || new Date().toLocaleString();
+  <script type="module" src="js/home.js"></script>
+  <script type="module">
+    // Navigation toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.querySelector('.main-nav');
+      const navLinks = document.querySelectorAll('.nav-list a');
+
+      if (navToggle) {
+        navToggle.addEventListener('click', () => {
+          mainNav.classList.toggle('open');
+          navToggle.setAttribute('aria-expanded', mainNav.classList.contains('open'));
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mainNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // Set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
   </script>
 >>>>>>> 72e89441759362dfd40b31c1b719dc2a18b98271
 </body>
