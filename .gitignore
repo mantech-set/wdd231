@@ -1,0 +1,21 @@
+# API Keys and Configuration
+chamber/js/config.js
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Editor files
+.DS_Store
+.vscode/
+*.swp
+*.swo
+*~
