@@ -10,6 +10,9 @@ const MEMBERS_DATA_URL = 'data/members.json';
 document.addEventListener('DOMContentLoaded', () => {
   loadWeather();
   loadSpotlights();
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadWeather();
+  await loadSpotlights();
   updateLastModified();
 });
 
@@ -157,4 +160,14 @@ function updateLastModified() {
   const lastModifiedSpan = document.getElementById('lastModified');
   const date = new Date(document.lastModified);
   lastModifiedSpan.textContent = date.toLocaleString();
+  if (lastModifiedSpan) {
+    const date = new Date(document.lastModified);
+    lastModifiedSpan.textContent = date.toLocaleString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  }
 }
