@@ -1,15 +1,13 @@
 // Home page specific functionality for weather and spotlights
 
+import { OPENWEATHER_API_KEY } from './config.js';
+
 // Enugu City coordinates (approximate)
 const ENUGU_LAT = 6.4969;
 const ENUGU_LON = 7.5519;
-const OPENWEATHER_API_KEY = '734911fad67e1dbe86b8e5843c9c60a9';
 const MEMBERS_DATA_URL = 'data/members.json';
 
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-  loadWeather();
-  loadSpotlights();
 document.addEventListener('DOMContentLoaded', async () => {
   await loadWeather();
   await loadSpotlights();
@@ -158,8 +156,6 @@ function displaySpotlightsError(message) {
 // ========== UTILITY FUNCTIONS ==========
 function updateLastModified() {
   const lastModifiedSpan = document.getElementById('lastModified');
-  const date = new Date(document.lastModified);
-  lastModifiedSpan.textContent = date.toLocaleString();
   if (lastModifiedSpan) {
     const date = new Date(document.lastModified);
     lastModifiedSpan.textContent = date.toLocaleString('en-US', {
