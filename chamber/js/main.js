@@ -159,8 +159,7 @@ async function init() {
       navToggle.setAttribute('aria-expanded', String(!expanded));
       mainNav.classList.toggle('open');
     });
-<<<<<<< HEAD
-=======
+
     // close menu when clicking outside of it
     document.addEventListener('click', (evt) => {
       if (!mainNav.classList.contains('open')) return;
@@ -189,7 +188,6 @@ async function init() {
         }
       });
     });
->>>>>>> 72e89441759362dfd40b31c1b719dc2a18b98271
   }
 
   // footer last modified
